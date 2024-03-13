@@ -18,7 +18,7 @@ const CardStack = () => {
         <>
             <button onClick={ addCard }>Draw A Card!</button>
             <button onClick={ reshuffle }>Reshuffle!</button>
-            <div classFor=cardArea>
+            <div className='cardArea'>
 
             </div>
         </>
