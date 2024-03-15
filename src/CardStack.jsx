@@ -24,6 +24,7 @@ const CardStack = () => {
     async function addCard() {
         const cardRes = await axios.get(`https://deckofcardsapi.com/api/deck/${deckId}/draw/`);
         const newCard = {
+            "key": cardRes.data.cards[0].code,
             "value": cardRes.data.cards[0].value,
             "suit": cardRes.data.cards[0].suit,
             "image": cardRes.data.cards[0].image
@@ -37,7 +38,7 @@ const CardStack = () => {
             <button onClick={ reshuffle }>Reshuffle!</button>
             <div className='cardArea'>
                 {cardList.map(card => (
-                    <Card value={card.value} suit={card.suit} image={card.image} />
+                    <Card key={card.key} value={card.value} suit={card.suit} image={card.image} />
                 ))}
             </div>
         </>
