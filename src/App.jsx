@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import './App.css';
 import CardStack from "./CardStack";
 
@@ -9,6 +9,6 @@ function App() {
       <CardStack />
     </>
   )
-}
+};
 
-export default App
+export default App;
