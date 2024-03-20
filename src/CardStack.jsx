@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Card from "./Card.jsx";
 import axios from "axios";
+import Card from "./Card.jsx";
 
 const CardStack = () => {
     const [ deckId, setDeckId ] = useState(null);
